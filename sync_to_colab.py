@@ -70,8 +70,8 @@ def sync_to_colab(commit_message="Auto-sync to Colab"):
     print("\n📋 Next steps in Colab:")
     print("   !git pull")
     print("   # or")
-    print("   !git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git")
-    print("   %cd YOUR_REPO")
+    print("   !git clone https://github.com/SabraHashemi/llm-project.git")
+    print("   %cd llm-project")
     
     return True
 
