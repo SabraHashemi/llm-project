@@ -49,6 +49,10 @@ class BaseTokenizerWrapper:
         if self._vocabulary is None:
             self._vocabulary = self.tokenizer.get_vocab()
         return self._vocabulary
+
+    def get_vocab(self) -> Dict[str, int]:
+        """Compatibility helper exposing the Hugging Face `get_vocab` API."""
+        return self.vocabulary
     
     @property
     def reverse_vocab(self) -> Dict[int, str]:
