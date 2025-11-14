@@ -198,10 +198,12 @@ def visualize_attention(
     if input_preprocessor is not None:
         inputs = input_preprocessor(inputs)
     else:
-        # Default: add batch dimension and move to device
+        # Default: add batch dimension
         if inputs.dim() == 1:
             inputs = inputs.unsqueeze(0)
-        inputs = inputs.to(device)
+    
+    # Move inputs to device after preprocessing
+    inputs = inputs.to(device)
 
     with torch.no_grad():
         outputs = model(inputs)
