@@ -14,6 +14,7 @@ class ScaledDotProductAttention(nn.Module):
     notebook and makes it reusable across the project. It supports the same
     behaviour as the notebook cell while exposing additional conveniences like
     an optional attention mask.
+    
 
     Parameters
     ----------
